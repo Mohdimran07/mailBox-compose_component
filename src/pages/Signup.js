@@ -1,11 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
+
   const signupHandler = async(e) => {
      e.preventDefault()
      console.log("signup")
@@ -21,6 +24,7 @@ const Signup = () => {
         })
         if(response){
             console.log(response)
+            navigate("/login")
             console.log("user successfully signed-in")
         }
      }catch(error){
@@ -63,7 +67,7 @@ const Signup = () => {
           <label>Re-enter Password</label>
         </div>
         <input type="submit" value="signup" />
-        <div className="login_link">Already have an account login</div>
+        <div className="login_link">Already have an account <Link to="/login">Login</Link></div>
       </form>
     </div>
   );
