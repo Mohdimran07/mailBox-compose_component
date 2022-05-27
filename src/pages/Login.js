@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import '../styles/Login.css';
 
 
 const Login = () => {
@@ -19,6 +20,7 @@ const Login = () => {
             if(response){
                 console.log(response)
                   navigate("/")
+                  localStorage.setItem("id", response.data.email)
                 console.log("user logged in");
             }
         }catch(error){

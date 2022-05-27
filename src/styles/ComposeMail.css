@@ -1,0 +1,68 @@
+.compose {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px rgb(51 51 51/59%);
+  background-color: #fff;
+}
+
+.compose .compose__header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(177, 153, 123);
+  color: white;
+  align-items: center;
+  padding: 7px 15px;
+}
+.compose__header__left span {
+  font-size: 14px;
+}
+
+.compose__header__right {
+  display: flex;
+  align-items: center;
+}
+
+.compose .compose__header .compose__header__right svg:hover {
+  background-color: #545454;
+  cursor: pointer;
+}
+
+.compose__body {
+  display: flex;
+}
+
+.compose__bodyForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.compose__bodyForm input,
+textarea {
+  width: 100% !important;
+  height: 40px;
+  outline: 0;
+  border: 0px;
+  box-shadow: inset 0 -1px 0 0 rgb(100 121 143/12%);
+  padding: 0px 10px;
+}
+.compose__bodyForm textarea {
+  height: auto;
+}
+
+.compose__footer {
+  padding: 12px 10px;
+}
+
+.compose__footerLeft button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+  background-color: #297be6;
+  outline: 0;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+}

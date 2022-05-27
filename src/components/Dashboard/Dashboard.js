@@ -1,9 +1,10 @@
 import React from 'react'
+import Composemail from '../Mailbox/Composemail'
 
 const Dashboard = () => {
   return (
     <div>
-      Welcome to Mail Box
+      <Composemail />
     </div>
   )
 }
